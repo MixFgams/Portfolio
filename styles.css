@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    background-color: #1E1E1E;
+}
+
+section{
+    background-color: #1E1E1E;
+    padding: 1px;
+}
+
+section:nth-of-type(2n){
+    background-color: #333333;
+}
+
+/* ---------- header ----------*/
+
+header{
+    display: flex;
+    justify-content: center;
+    height: 7em;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to right, rgba(82, 75, 121, 0.75), rgba(150, 137, 223, 0.75),rgba(82, 75, 121, 0.75));
+}
+
+header a{
+    position:relative;
+    padding: 1em;
+    font-size: 2em;
+    color: #391C59;
+    text-decoration: none;
+    text-shadow: inset 0px 4px 4px rgba(0,0,0, 1);
+    transition-duration: 0.5s;
+    box-sizing: content-box;
+}
+
+header a:hover{
+    font-size: 2.2em;
+    text-shadow: 0px 4px 4px rgba(0,0,0, 0.25);
+    text-decoration-color: #391C59;
+}
+
+header a::after{
+    content: "";
+    bottom:0;
+    height: 0.1em;
+    width: 100%;
+    background-color: #391C59;
+    left:0;
+    position: absolute;
+    transform-origin: bottom left;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+
+}
+
+header a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* ---------- end of hover ----------*/
+
+#pageSelected{
+    color: #391C59;
+    font-weight: bold;
+}
+
